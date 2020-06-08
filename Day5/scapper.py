@@ -12,7 +12,7 @@ auth.set_access_token(access_token,access_token_secret)
 api=tweepy.API(auth,wait_on_rate_limit=True)
 
 
-csvFile = open('tweets3.csv','a')
+csvFile = open('tweets2.csv','a')
 csvWriter = csv.writer(csvFile)
 
 for tweet in tweepy.Cursor(api.search,q="#China", count = 200,lang='en',since='2020-06-01').items():
